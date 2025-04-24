@@ -1,2 +1,3 @@
-# devops_tool_chain
-DevOps tool chain demo for CI/CD projects
+# DevOps Tool Chain: real world CI/CD example projects
+
+This repo consists of "real world" CI/CD example projects.
