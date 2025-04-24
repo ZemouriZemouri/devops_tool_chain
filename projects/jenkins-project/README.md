@@ -11,8 +11,6 @@ Jenkins is a widely-used open-source automation server that helps to automate va
 - [Background](#background)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Background
 
@@ -32,15 +30,7 @@ This repository aims to provide a seamless upgrade process for Jenkins users who
 
 Before attempting to upgrade Jenkins using the scripts in this repository, ensure that the following prerequisites are met:
 
-- Jenkins instance is currently running version 2.x.
+- Jenkins instance is currently running at least version 2.x.
 - Backup of Jenkins home directory and configuration.
 - Compatible versions of Java installed on the system.
 - Internet access to download the latest Jenkins release and plugins.
-
-## Contributing
-
-If you want to contribute to this project, follow the guidelines outlined in the [Contributing Guide](CONTRIBUTING.md). Contributions, bug reports, and feature requests are welcome.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
