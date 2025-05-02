@@ -26,12 +26,13 @@ public class TestGreeter {
 
     assertThat(greeter.greet(someone), containsString(someone));
   }
-  
+  // Commented out
+  /*
   @Test
   public void greetShouldIncludeTheOneBeingGreetedFailed() {
     assertTrue(true);
   }
-  
+  */
   @Test
   public void greetShouldIncludeGreetingPhrase() {
     String someone = "World";
