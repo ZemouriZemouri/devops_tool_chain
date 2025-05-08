@@ -33,7 +33,6 @@ pipeline {
                     ])
 					// Controle bestandsstructuur
 					sh 'ls -al'
-					sh 'ls -al jenkins-plugin-model/ci/'
                 }
             }
         }
