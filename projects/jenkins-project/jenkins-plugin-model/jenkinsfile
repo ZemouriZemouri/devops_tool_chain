@@ -19,14 +19,14 @@ pipeline {
             }
         }
 
-        stage('Checkout Jenkins Upgrade3 Git Repository') {
+        stage('Checkout Jenkins Git Repository') {
             steps {
                 script {
-                    // Clone the Git repository's master branch
+                    // Clone the Git repository's main branch
                     def gitRepoUrl = 'https://github.com/ZemouriZemouri/devops_tool_chain.git'
 
                     checkout([$class: 'GitSCM', 
-                        branches: [[name: '*/master']], 
+                        branches: [[name: '*/main']], 
                         userRemoteConfigs: [[url: gitRepoUrl]], 
                         extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'CloneOption', noTags: false, shallow: true, depth: 1]]
                     ])
@@ -42,7 +42,7 @@ pipeline {
 
         stage('Unit Test') {
             steps {
-                sh 'chmod +x ./jenkins-plugin-model/ci/03-unit-test.sh && ./jenkins-plugin-model/ci/03-unit-test.sh'
+                sh 'chmod +x ./jenkins-plugin-model/ci/02-unit-test.sh && ./jenkins-plugin-model/ci/02-unit-test.sh'
                 mstest testResultsFile:"**/*.trx"
             }
         }
@@ -59,8 +59,8 @@ pipeline {
                     echo "Build Number: $buildNumber"
                 
                 withCredentials([usernamePassword(credentialsId: '1bb08ca6-f3cb-4ec7-953f-c3f7a93401ac', usernameVariable: 'DOCKER_HUB_USER', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {                      
-                    sh "chmod +x ./jenkins-plugin-model/ci/04-push.sh"
-                    sh "./jenkins-plugin-model/ci/04-push.sh $buildNumber"
+                    sh "chmod +x ./jenkins-plugin-model/ci/03-publish.sh"
+                    sh "./jenkins-plugin-model/ci/03-publish.sh $buildNumber"
                 }
                 echo "Build Completed - Job Name: $jobName  --  Build Number: $buildNumber"
             }
