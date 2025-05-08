@@ -14,6 +14,7 @@ pipeline {
 
                     // Use them in shell commands
                     sh 'sudo docker --version'
+					export PATH="/usr/share/dotnet:$PATH"
                     sh 'sudo dotnet --info'
                 }
             }
