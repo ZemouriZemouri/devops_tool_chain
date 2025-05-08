@@ -31,6 +31,9 @@ pipeline {
                         userRemoteConfigs: [[url: gitRepoUrl]], 
                         extensions: [[$class: 'CleanBeforeCheckout'], [$class: 'CloneOption', noTags: false, shallow: true, depth: 1]]
                     ])
+					// Controle bestandsstructuur
+					sh 'ls -al'
+					sh 'ls -al jenkins-plugin-model/ci/'
                 }
             }
         }
