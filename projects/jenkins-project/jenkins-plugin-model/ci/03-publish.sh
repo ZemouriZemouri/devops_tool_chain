@@ -1,5 +1,5 @@
 #!/bin/bash
-docker image build -t zemourizemouri/jenkins-demo:$1 -f jenkins-plugin-model/src/demo2-publish/dockerfile .
+docker image build -t zemourizemouri/jenkins-demo:$1 -f projects/jenkins-project/jenkins-plugin-model/src/demo2-publish/dockerfile .
 
 if [ -z ${DOCKER_HUB_USER+x} ]
 then 
