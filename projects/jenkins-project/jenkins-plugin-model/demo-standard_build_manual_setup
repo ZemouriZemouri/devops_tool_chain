@@ -1,13 +1,20 @@
 # Demo - Standard Jenkins Build with Manual Plugin SetUp
 
+## Important remark: configuration/installation on Ubuntu 24.04
 ## Open Jenkins
 ## Install Utils on Jenkins Host Machine
 sudo apt-get update
-sudo apt-get install -y dotnet-sdk-7.0
+sudo apt-get install -y dotnet-sdk-8.0
 dotnet --version
 
 export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT="true" \
     PATH="${PATH}:/root/.dotnet"
+	
+## If command above doesn't work, follow the instructions below:
+
+sudo chmod -R 755 /usr/share/dotnet
+sudo chown -R root:root /usr/share/dotnet
+export PATH="/usr/share/dotnet:$PATH"
 
 
 ## Set up the project & clone the repo
@@ -25,8 +32,8 @@ Back to Jenkins - _Manage Jenkins_ ... _Manage Plugins_
 Create new freestyle job `pi`:
 
 - Git SCM
-- repo url `https://github.com/anshulc55/Jenkins_Upgradev3` (no credentials - public)
-- branch spec `\*master`
+- repo url `https://github.com/ZemouriZemouri/devops_tool_chain` (no credentials - public)
+- branch spec `\*main`
 - advanced clone - shallow, depth = 1
 - clean before checkout
 

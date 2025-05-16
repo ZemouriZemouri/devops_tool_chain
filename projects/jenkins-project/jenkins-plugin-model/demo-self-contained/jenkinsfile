@@ -2,21 +2,36 @@ pipeline {
     agent any
 
     stages {
-        stage('Install .NET 7 SDK') {
+        stage('Install .NET 8 SDK') {
             steps {
-                sh 'curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 7.0'
+                sh 'curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8.0'
             }
         }
 
         stage('Install Docker Engine CE') {
             steps {
                 sh '''
-                    curl -fsSL https://get.docker.com -o get-docker.sh
-                    sudo sh get-docker.sh
+                    sudo apt-get update
+                    # Remove existing Docker packages to avoid conflicts
+                    sudo apt-get remove -y docker docker-engine docker.io containerd runc || true
+                    # Install dependencies
+                    sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common
+                    # Add Docker's official GPG key and repository
+                    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+                    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+                    sudo apt-get update
+                    # Install Docker and containerd
+                    sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+                    # Start containerd first
+                    sudo systemctl start containerd
+                    sudo systemctl enable containerd
+                    # Start Docker and check status
                     sudo systemctl start docker
                     sudo systemctl enable docker
-                    sudo systemctl status docker
-                    sudo docker --version
+                    # Debugging: Check service statuses
+                    sudo systemctl status containerd || true
+                    sudo systemctl status docker || true
+                    docker --version
                 '''
             }
         }
@@ -24,8 +39,10 @@ pipeline {
         stage('Add Jenkins User to Docker Group') {
             steps {
                 sh '''
-                    sudo apt-get update
                     sudo usermod -aG docker jenkins
+                    # Use sg to run a command with the docker group without newgrp
+                    sg docker -c "echo Successfully added Jenkins to Docker group"
+                    # Restart Docker to apply group changes (may not be necessary but included for safety)
                     sudo systemctl restart docker
                 '''
             }
