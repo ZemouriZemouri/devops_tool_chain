@@ -1,0 +1,8 @@
+is_global = true
+build_property.RootNamespace = Pi.Runtime
+build_property.ProjectDir = C:\_dev\devops\devops_tool_chain\projects\jenkins-project\jenkins-plugin-model\src\Pi.Runtime\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.CsWinRTUseWindowsUIXamlProjections = false
+build_property.EffectiveAnalysisLevelStyle = 
+build_property.EnableCodeStyleSeverity = 
