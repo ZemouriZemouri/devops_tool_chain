@@ -44,7 +44,7 @@ pipeline {
         steps {
           echo "Building version: ${VERSION} with suffix: ${RELEASE_VERSION}"
           echo 'Mention your Application Build Code here!!!'
-          sh 'mvn -f ./projects/jenkins-project/java-tomcat-demo/pom.xml clean package'
+          sh 'mvn -e -X -f ./projects/jenkins-project/java-tomcat-demo/pom.xml clean package'
         }
       }
     }
