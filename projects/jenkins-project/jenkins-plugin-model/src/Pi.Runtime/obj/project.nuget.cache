@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yuo8V+B1FPs=",
+  "dgSpecHash": "qgevhClSb34=",
   "success": true,
-  "projectFilePath": "C:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Runtime\\Pi.Runtime.csproj",
+  "projectFilePath": "c:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Runtime\\Pi.Runtime.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\OtmanZemouri\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\OtmanZemouri\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

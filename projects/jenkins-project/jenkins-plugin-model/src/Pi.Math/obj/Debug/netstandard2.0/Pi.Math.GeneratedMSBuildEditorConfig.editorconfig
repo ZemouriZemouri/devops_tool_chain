@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = Pi.Math
-build_property.ProjectDir = C:\_dev\devops\devops_tool_chain\projects\jenkins-project\jenkins-plugin-model\src\Pi.Math\
+build_property.ProjectDir = c:\_dev\devops\devops_tool_chain\projects\jenkins-project\jenkins-plugin-model\src\Pi.Math\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false

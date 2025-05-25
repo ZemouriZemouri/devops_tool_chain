@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj": {}
+    "c:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj": {}
   },
   "projects": {
-    "C:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj": {
+    "c:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj",
+        "projectUniqueName": "c:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj",
         "projectName": "Pi.Math",
-        "projectPath": "C:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj",
+        "projectPath": "c:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\Pi.Math.csproj",
         "packagesPath": "C:\\Users\\OtmanZemouri\\.nuget\\packages\\",
-        "outputPath": "C:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\obj\\",
+        "outputPath": "c:\\_dev\\devops\\devops_tool_chain\\projects\\jenkins-project\\jenkins-plugin-model\\src\\Pi.Math\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
