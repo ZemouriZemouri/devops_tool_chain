@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Pi.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80bd7792b7ff23ae1d8f2b06360f3ec3d38f56a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0943de063d19dd09d771eded37100018542567ef")]
 [assembly: System.Reflection.AssemblyProductAttribute("Pi.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Pi.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
