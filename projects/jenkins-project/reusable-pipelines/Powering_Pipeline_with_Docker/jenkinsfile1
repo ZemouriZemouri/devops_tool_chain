@@ -19,7 +19,7 @@ pipeline {
               mvn -version
           '''
           sh 'printenv'
-          sh 'ls -l $WORKSPACE'
+          sh 'ls -l "$WORKSPACE"'
         }
       }
 
